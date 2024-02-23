@@ -1,0 +1,4 @@
+CREATE TABLE dados (
+    id SERIAL PRIMARY KEY,
+    mensagem VARCHAR(255) NOT NULL
+);

@@ -1,0 +1,36 @@
+version: '3'
+
+services:
+  app:
+    build:
+      context: ./App
+      dockerfile: Dockerfile_app
+    ports:
+      - "5000:5000"
+    depends_on:
+      - db
+    networks:
+      - mynetwork
+
+
+  db:
+    build:
+      context: ./PostgreSQL
+      dockerfile: Dockerfile_db
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: mydatabase
+    networks:
+      - mynetwork
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+networks:
+  mynetwork:
+    driver: bridge
+
+volumes:
+  db_data:
