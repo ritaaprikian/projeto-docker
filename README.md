@@ -25,7 +25,7 @@ pip install -r requirements.txt
 
 
 
-##Rodando projeto docker
+### Rodando projeto docker
 - Abra docker
 - Abra VSCode
 - Instale a extensão Thunder
@@ -38,4 +38,10 @@ pip install -r requirements.txt
 - Insira a senha: password
 - Insira database: mydatabase
 - Connect
-- Dentro da pasta public/dados você terá acesso há todos dados salvos 
+- Dentro da pasta public/dados você terá acesso há todos dados salvos
+
+
+
+### Link para as Imagens
+
+https://hub.docker.com/repositories/ritaaprikian
